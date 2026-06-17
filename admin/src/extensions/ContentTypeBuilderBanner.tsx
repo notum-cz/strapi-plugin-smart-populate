@@ -38,7 +38,7 @@ const ContentTypeBuilderBanner = () => {
   const [bannerRoot, setBannerRoot] = useState<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    get<OverridesResponse>('/strapi-plugin-smart-populate/overrides')
+    get<OverridesResponse>('/smart-populate/overrides')
       .then(({ data }) => setOverrides(data.data))
       .catch(() => setOverrides([]));
   }, [get]);
@@ -132,7 +132,7 @@ const ContentTypeBuilderBanner = () => {
                 </Typography>{' '}
                 and adjust{' '}
                 <Typography variant="epsilon" fontWeight="bold">
-                  <code>strapi-plugin-smart-populate.config.populateOverrides</code>
+                  <code>smart-populate.config.populateOverrides</code>
                 </Typography>
                 .
               </Typography>

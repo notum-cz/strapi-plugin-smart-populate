@@ -1,5 +1,5 @@
 {
-  "version": "0.0.0",
+  "version": "1.0.0",
   "packageManager": "yarn@1.22.22",
   "type": "commonjs",
   "exports": {
@@ -39,18 +39,18 @@
     "test:ts:types": "tsc -p types/tsconfig.json --noEmit"
   },
   "devDependencies": {
-    "@strapi/design-system": "^2.2.0",
-    "@strapi/icons": "^2.2.0",
-    "@strapi/sdk-plugin": "^6.1.1",
-    "@strapi/strapi": "^5.48.0",
-    "@strapi/typescript-utils": "^5.48.0",
-    "@types/react": "^18.3.31",
-    "@types/react-dom": "^18.3.7",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-router-dom": "^6.30.4",
-    "styled-components": "^6.4.2",
-    "typescript": "^5.9.3"
+    "@strapi/design-system": "2.2.0",
+    "@strapi/icons": "2.2.0",
+    "@strapi/sdk-plugin": "6.1.1",
+    "@strapi/strapi": "5.48.0",
+    "@strapi/typescript-utils": "5.48.0",
+    "@types/react": "18.3.31",
+    "@types/react-dom": "18.3.7",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-router-dom": "6.30.4",
+    "styled-components": "6.4.2",
+    "typescript": "5.9.3"
   },
   "peerDependencies": {
     "@strapi/design-system": "^2.2.0",
@@ -62,16 +62,24 @@
   },
   "strapi": {
     "kind": "plugin",
-    "name": "strapi-plugin-smart-populate",
+    "name": "smart-populate",
     "displayName": "Smart Populate",
     "description": "Smart populate utilities for Strapi content."
   },
-  "name": "strapi-plugin-smart-populate",
+  "name": "@notum-cz/strapi-plugin-smart-populate",
   "description": "Smart populate utilities for Strapi content.",
   "license": "MIT",
   "author": "Notum Technologies s.r.o. <sales@notum.cz> (https://notum.tech)",
   "maintainers": [
     "Notum Technologies s.r.o. <sales@notum.cz>",
     "Libor Riha <libor.riha@notum.cz>"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/notum-cz/strapi-plugin-smart-populate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/notum-cz/strapi-plugin-smart-populate/issues"
+  },
+  "homepage": "https://github.com/notum-cz/strapi-plugin-smart-populate#readme"
 }
