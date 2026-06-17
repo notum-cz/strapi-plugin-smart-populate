@@ -1,6 +1,6 @@
 <div align="center">
   <picture>
-    <img src="./smart-populate.png" height="250" alt="Smart Populate Plugin Logo"/>
+    <img src="./assets/smart-populate.png" height="250" alt="Smart Populate Plugin Logo"/>
   </picture>
   <h1  style="margin-top:20px;">Smart Populate Plugin for Strapi V5</h1>
   <p>by<br />
@@ -445,13 +445,13 @@ The banner color depends on how the override is configured:
 If `mergeWithGeneratedPopulate` is `true`, the banner is displayed as a
 warning. The component still uses the generated populate config, but the
 manual override is merged into it.
-![Smart populate merged override warning](./populate-orange-warning.png)
+![Smart populate merged override warning](./assets/populate-orange-warning.png)
 
 **Manual override alert:**
 If `mergeWithGeneratedPopulate` is omitted or `false`, the banner is displayed
 as a red alert. In this mode the manual override fully replaces the generated
 populate config for that component.
-![Smart populate manual override alert](./populate-red-warning.png)
+![Smart populate manual override alert](./assets/populate-red-warning.png)
 
 This makes schema maintenance safer. When someone changes a component schema in
 the Content-Type Builder, the banner makes it visible that the smart populate
