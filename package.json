@@ -26,6 +26,19 @@
       "default": "./dist/types/index.js"
     }
   },
+  "typesVersions": {
+    "*": {
+      "types": [
+        "dist/types/index.d.ts"
+      ],
+      "strapi-admin": [
+        "dist/admin/src/index.d.ts"
+      ],
+      "strapi-server": [
+        "dist/server/src/index.d.ts"
+      ]
+    }
+  },
   "files": [
     "dist"
   ],
