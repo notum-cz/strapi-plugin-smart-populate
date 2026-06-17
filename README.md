@@ -452,6 +452,8 @@ the Content-Type Builder, the banner makes it visible that the smart populate
 behavior is partially or fully controlled by a manual override and should be
 reviewed.
 
+(We are currently facing some issues with Admin Banner on mobile devices.)
+
 ## 🤝 Community
 
 ### Maintained by [Notum Technologies](https://notum.tech/?utm_source=strapi-plugin&utm_medium=github&utm_campaign=smart-populate-readme)
