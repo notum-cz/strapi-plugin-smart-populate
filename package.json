@@ -73,5 +73,13 @@
   "maintainers": [
     "Notum Technologies s.r.o. <sales@notum.cz>",
     "Libor Riha <libor.riha@notum.cz>"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/notum-cz/strapi-plugin-smart-populate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/notum-cz/strapi-plugin-smart-populate/issues"
+  },
+  "homepage": "https://github.com/notum-cz/strapi-plugin-smart-populate#readme"
 }
