@@ -1,1 +1,1 @@
-export const PLUGIN_ID = 'strapi-plugin-smart-populate';
+export const PLUGIN_ID = 'smart-populate';

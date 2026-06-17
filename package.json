@@ -62,11 +62,11 @@
   },
   "strapi": {
     "kind": "plugin",
-    "name": "strapi-plugin-smart-populate",
+    "name": "smart-populate",
     "displayName": "Smart Populate",
     "description": "Smart populate utilities for Strapi content."
   },
-  "name": "strapi-plugin-smart-populate",
+  "name": "@notum-cz/strapi-plugin-smart-populate",
   "description": "Smart populate utilities for Strapi content.",
   "license": "MIT",
   "author": "Notum Technologies s.r.o. <sales@notum.cz> (https://notum.tech)",

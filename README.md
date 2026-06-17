@@ -108,7 +108,7 @@ That can make Strapi slower, especially for pages with many dynamic zones and
 nested components. In more demanding projects, the API can become unstable or
 start failing under load.
 
-`strapi-plugin-smart-populate` moves that responsibility into Strapi. Instead of sending
+`@notum-cz/strapi-plugin-smart-populate` moves that responsibility into Strapi. Instead of sending
 a large populate object from the frontend, callers can use `"smart"` where they
 want Strapi to resolve the correct component populate shape.
 
@@ -152,16 +152,10 @@ Install the plugin via npm or yarn:
 
 ```bash
 # NPM
-npm install strapi-plugin-smart-populate
+npm install @notum-cz/strapi-plugin-smart-populate
 
 # Yarn
-yarn add strapi-plugin-smart-populate
-```
-
-If you install directly from GitHub:
-
-```bash
-yarn add github:notum-cz/strapi-plugin-smart-populate
+yarn add @notum-cz/strapi-plugin-smart-populate
 ```
 
 ### Enable the plugin
@@ -170,7 +164,7 @@ Create or update `config/plugins.ts` in your Strapi app:
 
 ```ts
 export default () => ({
-  'strapi-plugin-smart-populate': {
+  'smart-populate': {
     enabled: true,
   },
 });
@@ -200,7 +194,7 @@ export default [
   'strapi::logger',
   'strapi::query',
   // Position is important, place after `strapi::query` and before `strapi::body`.
-+ 'plugin::strapi-plugin-smart-populate.sanitize-smart-populate',
++ 'plugin::smart-populate.sanitize-smart-populate',
   'strapi::body',
   'strapi::session',
   'strapi::favicon',
@@ -295,7 +289,7 @@ the consuming Strapi project.
 
 ```ts
 import type { Modules, UID } from '@strapi/strapi';
-import type { PopulateOverrideEntries } from 'strapi-plugin-smart-populate/types';
+import type { PopulateOverrideEntries } from '@notum-cz/strapi-plugin-smart-populate/types';
 
 type ComponentPopulateMap = {
   [TComponentUID in UID.Component]: Required<
@@ -316,7 +310,7 @@ const populateOverrides = [
 ] satisfies PopulateOverrideEntries<ComponentPopulateMap>;
 
 export default () => ({
-  'strapi-plugin-smart-populate': {
+  'smart-populate': {
     enabled: true,
     config: {
       populateOverrides,
@@ -338,7 +332,7 @@ becomes the full populate object for that component.
 
 ## TypeScript
 
-The plugin exports generic wrapper types from `strapi-plugin-smart-populate/types`.
+The plugin exports generic wrapper types from `@notum-cz/strapi-plugin-smart-populate/types`.
 
 These helpers intentionally do not import generated Strapi schemas. A plugin
 package does not know the generated types of the project that consumes it. The
@@ -354,7 +348,7 @@ valid instead of forcing every caller to remember or manually type the string.
 
 ```ts
 import type { Modules, UID } from '@strapi/strapi';
-import type { WithSmartPopulate } from 'strapi-plugin-smart-populate/types';
+import type { WithSmartPopulate } from '@notum-cz/strapi-plugin-smart-populate/types';
 
 export type FindMany<TContentTypeUID extends UID.ContentType> = WithSmartPopulate<
   Modules.Documents.ServiceParams<TContentTypeUID>['findMany']
@@ -370,7 +364,7 @@ import type { Modules, UID } from '@strapi/strapi';
 import type {
   WithSmartPopulate,
   WithSmartPopulateResultParams,
-} from 'strapi-plugin-smart-populate/types';
+} from '@notum-cz/strapi-plugin-smart-populate/types';
 
 // Re-export document engine service function types
 export type FindMany<TContentTypeUID extends UID.ContentType> = WithSmartPopulate<
