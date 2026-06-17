@@ -191,7 +191,7 @@ To use `"smart"` in REST API queries, add the plugin middleware to
 Place it after `strapi::query` and before `strapi::body`. At that point Strapi
 has already parsed the query, but has not yet validated the populate value.
 
-```ts
+```diff
 export default [
   'strapi::errors',
   'strapi::security',
@@ -199,7 +199,8 @@ export default [
   'strapi::poweredBy',
   'strapi::logger',
   'strapi::query',
-  'plugin::strapi-plugin-smart-populate.sanitize-smart-populate',
+  // Position is important, place after `strapi::query` and before `strapi::body`.
++ 'plugin::strapi-plugin-smart-populate.sanitize-smart-populate',
   'strapi::body',
   'strapi::session',
   'strapi::favicon',
