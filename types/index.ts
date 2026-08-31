@@ -4,17 +4,22 @@ type SmartPopulateObject<TPopulate extends object> = {
   [TKey in keyof TPopulate]?: SmartPopulateValue<TPopulate[TKey]>;
 };
 
+// Strapi adds `count` to nested populate params that target content types,
+// including media and relations.
 type SmartPopulateValue<TValue> =
-  | SmartPopulateToken
-  | (TValue extends { populate?: infer TNestedPopulate }
-      ? Omit<TValue, 'populate'> & {
-          populate?: SmartPopulate<TNestedPopulate>;
-        }
-      : TValue extends readonly (infer TItem)[]
-        ? readonly SmartPopulateValue<TItem>[]
-        : TValue extends object
-          ? SmartPopulate<TValue>
-          : TValue);
+  Extract<TValue, { count?: boolean }> extends never
+    ?
+        | SmartPopulateToken
+        | (TValue extends { populate?: infer TNestedPopulate }
+            ? Omit<TValue, 'populate'> & {
+                populate?: SmartPopulate<TNestedPopulate>;
+              }
+            : TValue extends readonly (infer TItem)[]
+              ? readonly SmartPopulateValue<TItem>[]
+              : TValue extends object
+                ? SmartPopulate<TValue>
+                : TValue)
+    : TValue;
 
 type SmartPopulate<TPopulate> =
   | TPopulate
@@ -103,8 +108,5 @@ export type WithSmartPopulateResult<
   },
 > = Extend<
   TResult,
-  Pick<
-    TContext['contentType'],
-    PopulatedKeys<TParams['populate'], TContext['populatableKeys']>
-  >
+  Pick<TContext['contentType'], PopulatedKeys<TParams['populate'], TContext['populatableKeys']>>
 >;
