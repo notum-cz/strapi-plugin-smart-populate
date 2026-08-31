@@ -1,25 +1,24 @@
 <div>
-<table>
-<tr width="900">
-<td width="250">
 
  <picture>
     <img src="./assets/smart-populate.png" width="250" alt="Smart Populate Plugin Logo"/>
   </picture>
   </td>
-  <td width="650">  
+
   <h1>Smart Populate Plugin for Strapi V5</h1>
    <p>
-      Keep large Strapi projects fast by replacing huge dynamic-zone populate objects with a small <code>"smart"</code> populate token. <a href="https://github.com/notum-cz/strapi-plugin-smart-populate/issues/"
-      >Report Bug or Request Feature</a
-    >
+      Keep large Strapi projects fast by replacing huge dynamic-zone populate objects with a small <code>"smart"</code> populate token. 
     </p>
   <p>
   Managed by<br>
   <a href="https://notum.tech/?utm_source=strapi-plugin&utm_medium=github&utm_campaign=smart-populate-readme">
     <img width="100" src="./assets/notum-logo.svg" alt="Notum Technologies" />
-  </a>
+  </a><br>
+  <a href="https://github.com/notum-cz/strapi-plugin-smart-populate/issues/"
+      >Report Bug or Request Feature</a
+    >
   </p>
+  <!-- Badges -->
     <p>
     <a
       href="https://github.com/notum-cz/strapi-plugin-smart-populate/graphs/contributors"
@@ -58,12 +57,6 @@
       />
     </a>
   </p>
-
-  </td>
-  </tr>
-</table>
-
-  <!-- Badges -->
 
 </div>
 
