@@ -6,7 +6,7 @@ import type { PluginConfig, PopulateOverrideEntry } from '../types';
 export const DEFAULT_ACTIONS = ['findMany', 'findOne', 'findFirst'];
 
 const getConfigValue = <T>(strapi: Core.Strapi, key: keyof PluginConfig, defaultValue: T) => {
-  const value = strapi.config.get(`plugin.${PLUGIN_ID}.${key}`);
+  const value = strapi.config.get(`plugin::${PLUGIN_ID}.${key}`);
 
   return value === undefined ? defaultValue : (value as T);
 };
