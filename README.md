@@ -137,12 +137,12 @@ Relations that need a more specific shape can be configured with
 
 ### Supported Versions
 
-This plugin is compatible with Strapi `v5.x.x` and has been tested on Strapi
-`v5.48.0`. We expect it should also work on older versions of Strapi V5.
+This plugin is compatible with Strapi `v5.x.x` and should also work on older and potentially newer versions of Strapi V5.
 
-| Plugin version | Strapi Version | Full Support |
-| -------------- | -------------- | ------------ |
-| `0.x`          | `^5.48.0`      | ✅           |
+| Plugin version    | Strapi Version | Full Support |
+| ----------------- | -------------- | ------------ |
+| `1.0.0` - `1.0.1` | `^5.48.0`      | ✅           |
+| `1.0.2`           | `^5.52.2`      | ✅           |
 
 ## Getting Started
 
