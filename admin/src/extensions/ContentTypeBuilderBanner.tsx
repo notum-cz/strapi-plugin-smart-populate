@@ -60,7 +60,7 @@ const ContentTypeBuilderBanner = () => {
     const attachBannerRoot = () => {
       const header = document.querySelector<HTMLElement>('[data-strapi-header]');
 
-      if (!header || root) {
+      if (!header || root?.isConnected) {
         return false;
       }
 
@@ -72,14 +72,10 @@ const ContentTypeBuilderBanner = () => {
       return true;
     };
 
-    if (attachBannerRoot()) {
-      return () => root?.remove();
-    }
+    attachBannerRoot();
 
     const observer = new MutationObserver(() => {
-      if (attachBannerRoot()) {
-        observer.disconnect();
-      }
+      attachBannerRoot();
     });
 
     observer.observe(document.body, {
