@@ -1,21 +1,26 @@
-<div align="center">
-  <picture>
-    <img src="./assets/smart-populate.png" height="250" alt="Smart Populate Plugin Logo"/>
+<div>
+<table>
+<tr width="900">
+<td width="250">
+
+ <picture>
+    <img src="./assets/smart-populate.png" width="250" alt="Smart Populate Plugin Logo"/>
   </picture>
-  <h1  style="margin-top:20px;">Smart Populate Plugin for Strapi V5</h1>
-  <p>by<br />
+  </td>
+  <td width="650">  
+  <h1>Smart Populate Plugin for Strapi V5</h1>
+   <p>
+      Keep large Strapi projects fast by replacing huge dynamic-zone populate objects with a small <code>"smart"</code> populate token. <a href="https://github.com/notum-cz/strapi-plugin-smart-populate/issues/"
+      >Report Bug or Request Feature</a
+    >
+    </p>
+  <p>
+  Managed by<br>
   <a href="https://notum.tech/?utm_source=strapi-plugin&utm_medium=github&utm_campaign=smart-populate-readme">
-    <img style="margin-top: 0.5rem" src="https://raw.githubusercontent.com/notum-cz/strapi-plugin-tiptap-editor/main/assets/notum-logo.svg" alt="Notum Technologies" />
+    <img width="100" src="./assets/notum-logo.svg" alt="Notum Technologies" />
   </a>
   </p>
-
-  <p>
-    Keep large Strapi projects fast by replacing huge dynamic-zone populate objects <br />
-    with a small <code>"smart"</code> populate token.
-  </p>
-
-  <!-- Badges -->
-  <p>
+    <p>
     <a
       href="https://github.com/notum-cz/strapi-plugin-smart-populate/graphs/contributors"
     >
@@ -54,11 +59,12 @@
     </a>
   </p>
 
-  <h4>
-    <a href="https://github.com/notum-cz/strapi-plugin-smart-populate/issues/"
-      >Report Bug or Request Feature</a
-    >
-  </h4>
+  </td>
+  </tr>
+</table>
+
+  <!-- Badges -->
+
 </div>
 
 <br />
@@ -458,7 +464,7 @@ reviewed.
 
 ### Maintained by [Notum Technologies](https://notum.tech/?utm_source=strapi-plugin&utm_medium=github&utm_campaign=smart-populate-readme)
 
-Built and maintained by [Notum Technologies](https://notum.tech/?utm_source=strapi-plugin&utm_medium=github&utm_campaign=smart-populate-readme), a Czech-based Strapi Enterprise Partner with a passion for open-source tooling.
+Built and maintained by [Notum Technologies](https://notum.tech/?utm_source=strapi-plugin&utm_medium=github&utm_campaign=smart-populate-readme), a Czech-based Strapi Enterprise Partner with a passion for open-source tooling. Check out more of our work in the [Strapi plugins and starters](https://www.notum.tech/platforms/strapi/plugins-and-starters) section on our website.
 
 #### Current maintainer
 
